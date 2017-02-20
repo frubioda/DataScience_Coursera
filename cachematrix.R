@@ -13,8 +13,17 @@ makeCacheMatrix <- function(x = matrix()){
   list(set=set, get=get, setInverse=setInverse, getInverse=getInverse)
 }
 
-## Write a short comment describing this function
+## Function2: computes the inverse of the special matrix created by 
+## makeCacheMatrix and retrieve the inverse.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  m <- x$getInverse()
+  if (!is.null(m)){
+    message("getting cached matrix")
+    return(m)
+  }
+  matrx <- x$get()
+  m <- solve(matrx, ...)
+  x$setInverse(m)
+  m
 }
