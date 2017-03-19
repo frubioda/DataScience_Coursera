@@ -1,11 +1,11 @@
 ```{r}
 library(dplyr)
 library(data.table)
-setwd("~/job_interviews/Coursera_DataAnalysis/course3/project/")
+setwd("~/Coursera_DataAnalysis/course3/project/")
 path <- getwd()
 ```
 
-DATA COLLECTED FROM THE ACCELEROMETERS FROM THE SAMSUNG GALAXY S SMARTPHONE
+# DATA COLLECTED FROM THE ACCELEROMETERS FROM THE SAMSUNG GALAXY S SMARTPHONE
 
 Download data
 
