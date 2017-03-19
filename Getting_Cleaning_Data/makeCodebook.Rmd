@@ -48,7 +48,7 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
 ```{r}
-setwd("~/job_interviews/Coursera_DataAnalysis/course3/project/UCI HAR Dataset/")
+setwd("~/Coursera_DataAnalysis/course3/project/UCI HAR Dataset/")
 getwd()
 data_tidy <- read.table("./tidy_data.txt", header=FALSE)
 ```
