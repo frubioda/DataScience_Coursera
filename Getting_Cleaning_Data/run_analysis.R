@@ -1,5 +1,5 @@
 library(dplyr)
-setwd("~/job_interviews/Coursera_DataAnalysis/course3/project/")
+setwd("~/Coursera_DataAnalysis/course3/project/")
 path <- getwd()
 
 ## DATA COLLECTED FROM THE ACCELEROMETERS FROM THE SAMSUNG GALAXY S SMARTPHONE
@@ -30,7 +30,6 @@ x_test <- read.table("./test/X_test.txt", header=FALSE)
 y_test <- read.table("./test/y_test.txt", header=FALSE)
 
 # Merge training and test data
-#test_data <- merge(x_train, y_train, all=TRUE, by=c("V1"))
 activity <- rbind(subject_train, subject_test)
 subject <- rbind(y_train, y_test)
 features <- rbind(x_train, x_test)
