@@ -1,12 +1,12 @@
 ```{r}
 library(dplyr)
 library(data.table)
-setwd("~/Coursera_DataAnalysis/course3/project/")
+setwd("~/job_interviews/Coursera_DataAnalysis/course3/project/")
 path <- getwd()
 ```
 
-# DATA COLLECTED FROM THE ACCELEROMETERS FROM THE SAMSUNG GALAXY S SMARTPHONE
-
+DATA COLLECTED FROM THE ACCELEROMETERS FROM THE SAMSUNG GALAXY S SMARTPHONE
+============
 Download data
 
 ```{r}
@@ -49,6 +49,7 @@ x_test <- read.table("./test/X_test.txt", header=FALSE)
 y_test <- read.table("./test/y_test.txt", header=FALSE)
 ```
 Merge training and test data
+============================
 ```{r}
 #test_data <- merge(x_train, y_train, all=TRUE, by=c("V1"))
 activity <- rbind(subject_train, subject_test)
@@ -68,7 +69,8 @@ Merging all there dataset features
 df <- cbind(features,activity,subject)
 ```
 
-Extract mean and standard deviation for each measurement. 
+Extract mean and standard deviation for each measurement.
+=========================================================
 ```{r}
 index_mean_stdev <- grep(".*[Mm]ean.*|.*[Ss]td.*", names(df), ignore.case=TRUE)
 subset_mean_stdev <- df[,index_mean_stdev]
@@ -93,6 +95,7 @@ for (i in 1:length(activity_labels)){
 ```
 
 Appropriately labels the data set with descriptive variable names.
+=================================================================
 ```{r}
 names(df) <- gsub("Acc", "Accelerometer", names(df)) #Acc replaced by Accelerometer
 names(df) <- gsub("Gyro", "Gyroscope", names(df)) #Gyro replaced by Gyroscope
@@ -109,6 +112,7 @@ names(df) <- gsub("-freq()", "Frequency", names(df), ignore.case = TRUE) #-freq(
 ```
 
 Create tidy data set with the average of each variable for each activity and each subject.
+==========================================================================
 ```{r}
 tidy_data <- aggregate(. ~ Subject + Activity, df, mean)
 tidy_data <- tidy_data[order(tidy_data$Subject,tidy_data$Activity),]
