@@ -5,10 +5,7 @@ library(data.table)
 library(lubridate)
 library(dplyr)
 
-# Load the read_data file
-source('./read_data.R')
-
-sel_subsect_data <- function() {
+#sel_subsect_data <- function() {
 # Read data
   power_consuption <- read.table("./household_power_consumption.txt", header=TRUE, 
                                  sep=';',na.strings='?')
@@ -20,9 +17,8 @@ sel_subsect_data <- function() {
   subset_PC <- power_consuption[power_consuption$Date == ymd(20070201) | power_consuption$Date == ymd(20070202), ]
   subset_PC
   cat("End of file reading and subsetting; output is subset_PC ...")
-}
-
-sel_subsect_data()
+#}
+#sel_subsect_data()
 
 # PNG file with a width of 480 pixels and a height of 480 pixels
 png(filename='plot2.png', width=480, height=480, units='px')
