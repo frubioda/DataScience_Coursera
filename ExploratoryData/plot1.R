@@ -22,6 +22,8 @@ sel_subsect_data <- function() {
   cat("End of file reading and subsetting; output is subset_PC ...")
 }
 
+sel_subsect_data()
+
 # PNG file with a width of 480 pixels and a height of 480 pixels
 png(filename='plot1.png', width=480, height=480, units='px')
 hist(subset_PC$Global_active_power, main="Global Active Power", col="red", 
