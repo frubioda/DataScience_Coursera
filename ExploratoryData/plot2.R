@@ -1,4 +1,4 @@
-setwd("~/job_interviews/Coursera_DataAnalysis/course4/week1/project/")
+setwd("~/Coursera_DataAnalysis/course4/week1/project/")
 path <- getwd()
 
 library(data.table)
