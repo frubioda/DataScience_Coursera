@@ -1,12 +1,9 @@
-setwd("~/job_interviews/Coursera_DataAnalysis/course4/week1/project/")
+setwd("~/Coursera_DataAnalysis/course4/week1/project/")
 path <- getwd()
 
 library(data.table)
 library(lubridate)
 library(dplyr)
-
-# Load the read_data file
-#source('./read_data.R')
 
 #sel_subset_data <- function() {
   # Read data
