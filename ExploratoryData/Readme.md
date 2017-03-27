@@ -110,4 +110,4 @@ The four plots that you will need to construct are shown below.
 
 ### Plot 4
 
-![plot of plot4](figure/plot4.png) 
+![plot of plot4](plot4.png) 
